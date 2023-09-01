@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bycrypt = require("bcrypt");
 
-
 const SALT_ROUNDS = 6;
 
 const userSchema = new Schema(
@@ -21,6 +20,7 @@ const userSchema = new Schema(
       minLength: 3,
       required: true,
     },
+    notes: { type: Array },
   },
   {
     timestamps: true,
